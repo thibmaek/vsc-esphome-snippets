@@ -1,0 +1,103 @@
+{
+  "Substitutions": {
+    "description": "ESPHome: Substitute values in the ESPHome config",
+    "prefix": ["subs", "substitutions"],
+    "body": [
+      "substitutions:",
+      "  ${device_name}: ${device_id}",
+      "  ${friendly_name}: ${Name}",
+    ]
+  },
+  "Include file": {
+    "description": "ESPHome: Include a partial file in the ESPHome config",
+    "prefix": ["inc","include"],
+    "body": "<<: !include ${common.yaml}"
+  },
+  "Secret": {
+    "description": "ESPHome: Secret reference",
+    "prefix": ["sec", "secret"],
+    "body": "!secret ${secret_id}",
+  },
+  "Core config": {
+    "description": "ESPHome: Core configuration",
+    "prefix": ["core", "esphome", "esp"],
+    "body": [
+      "esphome:",
+      "  name: ${name}",
+      "  platform: ${platform}",
+      "  board: ${board}",
+      "  ${build_path: \"./build/\\${device_name}\"}",
+      "",
+      "${api:}",
+      "",
+      "${ota:}",
+    ],
+  },
+  "Packages": {
+    "description": "ESPHome: Packages configuration",
+    "prefix": ["pkg", "packages"],
+    "body": [
+      "packages:",
+      "  ${my_pkg}: !include ${pkg.yaml}",
+    ],
+  },
+  "Font": {
+    "description": "ESPHome: Font file component",
+    "prefix": "font",
+    "body": [
+      "font:",
+      "  - file: 'assets/fonts/${arial}.ttf'",
+      "    id: ${arial}",
+      "    size: ${2:28}"
+    ],
+  },
+  "Interval": {
+    "description": "ESPHome: Interval Component",
+    "prefix": ["ivl", "interval"],
+    "body": [
+      "interval:",
+      "  - interval: ${1:1min}",
+      "    then:",
+      "      - ${delay: 200ms}",
+    ],
+  },
+  "API Services": {
+    "description": "ESPHome: Define custom services over the API",
+    "prefix": ["svc", "services"],
+    "body": [
+      "api:",
+      "  services:",
+      "    - service: ${svc_name}",
+      "      variables:",
+      "        ${delay_time}: float",
+      "      then:",
+      "        - ${delay: !lambda 'return delay_time;'}",
+      "        - lambda: |-",
+      "            println(${delay_time})",
+    ]
+  },
+  "Logger": {
+    "description": "ESPHome: Logger Component",
+    "prefix": "logger",
+    "body": ["logger:"],
+  },
+  "MQTT": {
+    "description": "ESPHome: MQTT Component",
+    "prefix": "mqtt",
+    "body": [
+      "mqtt:",
+      "  broker: ${host}",
+      "  ${username: user}",
+      "  ${password: password}",
+    ],
+  },
+  "WiFi": {
+    "description": "ESPHome: WiFi Component",
+    "prefix": "wifi",
+    "body": [
+      "wifi:",
+      "  ssid: ${ssid}",
+      "  password: ${psk}",
+    ],
+  },
+}

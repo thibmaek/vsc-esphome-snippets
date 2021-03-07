@@ -1,0 +1,44 @@
+{
+  "Generic": {
+    "description": "ESPHome: Sensor (https://esphome.io/components/sensor/index.html)",
+    "prefix": "sensor",
+    "body": [
+      "name: ${name}",
+      "unit_of_measurement: \"${%}\" # Optional",
+      "icon: \"${mdi:percent}\" # Optional",
+      "accuracy_decimals: 2 # Optional",
+      "internal: false # Optional",
+      "force_update: false # Optional",
+    ]
+  },
+  "ADC": {
+    "description": "ESPHome: ADC Sensor",
+    "prefix": "adc",
+    "body": [
+      "- platform: adc",
+      "  pin: ${A0}",
+    ],
+  },
+  "MCP3008": {
+    "description": "ESPHome: MCP3008 Sensor",
+    "prefix": "mcp3008",
+    "body": [
+      "- platform: mcp3008",
+      "  number: ${1:0}"
+    ],
+  },
+  "BME280": {
+    "description": "ESPHome: BME280 Sensor",
+    "prefix": "bme280",
+    "body": [
+      "- platform: bme280",
+      "  address: ${1:0x76}",
+      "  temperature:",
+      "    id: ${temperature}",
+      "  pressure:",
+      "    id: ${pressure}",
+      "  humidity:",
+      "    id: ${humidity}",
+    ],
+  },
+}

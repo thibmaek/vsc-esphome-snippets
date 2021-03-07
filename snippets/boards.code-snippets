@@ -1,0 +1,22 @@
+{
+  "ESP32": {
+    "description": "ESPHome: ESP32 Board",
+    "prefix": "esp32",
+    "body": [
+      "esphome:",
+      "  name: ${name}",
+      "  platform: ESP32",
+      "  board: ${1|alksesp32,bpi-bit,d-duino-32,esp-wrover-kit,esp32-devkitlipo,esp32-evb,esp32-gateway,esp32-poe,esp32-poe-iso,esp32-pro,esp320,esp32cam,esp32dev,esp32doit-devkit-v1,esp32thing,esp32vn-iot-uno,espea32,espectro32,espino32,featheresp32,firebeetle32,fm-devkit,frogboard,heltec_wifi_kit_32,heltec_wifi_lora_32,heltec_wifi_lora_32_V2,heltec_wireless_stick,hornbill32dev,hornbill32minima,intorobot,iotaap_magnolia,iotbusio,iotbusproteus,lolin32,lolin_d32,lolin_d32_pro,lopy,lopy4,m5stack-core-esp32,m5stack-fire,m5stack-grey,m5stick-c,magicbit,mhetesp32devkit,mhetesp32minikit,microduino-core-esp32,nano32,nina_w10,node32s,nodemcu-32s,odroid_esp32,onehorse32dev,oroca_edubot,pico32,pocket_32,pycom_gpy,quantum,sparkfun_lora_gateway_1-channel,tinypico,ttgo-lora32-v1,ttgo-t-beam,ttgo-t-watch,ttgo-t1,turta_iot_node,vintlabs-devkit-v1,wemos_d1_mini32,wemosbat,wesp32,widora-air,xinabox_cw02|}",
+    ],
+  },
+  "ESP8266": {
+    "description": "ESPHome: ESP8266 Board",
+    "prefix": "esp8266",
+    "body": [
+      "esphome:",
+      "  name: ${name}",
+      "  platform: ESP8266",
+      "  board: ${1|d1,d1_mini,d1_mini_lite,d1_mini_pro,esp01,esp01_1m,esp07,esp12e,esp210,esp8285,esp_wroom_02,espduino,espectro,espino,espinotee,espresso_lite_v1,espresso_lite_v2,gen4iod,heltec_wifi_kit_8,huzzah,inventone,modwifi,nodemcu,nodemcuv2,oak,phoenix_v1,phoenix_v2,sparkfunBlynk,thing,thingdev,wifi_slot,wifiduino,wifinfo,wio_link,wio_node,xinabox_cw01|}",
+    ],
+  },
+}

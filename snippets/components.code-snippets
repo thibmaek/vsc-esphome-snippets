@@ -1,0 +1,40 @@
+{
+  "I2C": {
+    "description": "ESPHome: I2C Component",
+    "prefix": "i2c",
+    "body": [
+      "i2c:",
+      "  sda: ${GPIO4}",
+      "  scl: ${GPIO5}",
+      "  scan: true",
+    ],
+  },
+  "SPI": {
+    "description": "ESPHome: SPI Component",
+    "prefix": "spi",
+    "body": [
+      "spi:",
+      "  clk_pin: ${D5}",
+      "  miso_pin: ${D6}",
+      "  mosi_pin: ${D7}",
+    ],
+  },
+  "MCP3008": {
+    "description": "ESPHome: MCP3008 Component",
+    "prefix": "mcp3008",
+    "body": [
+      "mcp3008:",
+      "  cs_pin: ${D8}",
+    ],
+  },
+  "UART": {
+    "description": "ESPHome: UART Component",
+    "prefix": ["uart", "rx", "tx"],
+    "body": [
+      "uart:",
+      "  tx_pin: ${GPIO01}",
+      "  rx_pin: ${GPIO03}",
+      "  baud_rate: ${3:19200}"
+    ],
+  },
+}
