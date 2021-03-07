@@ -1,0 +1,27 @@
+{
+  "Generic Binary Sensor": {
+    "description": "ESPHome: Binary Sensor (https://esphome.io/components/binary_sensor/index.html)",
+    "prefix": ["binary"],
+    "body": [
+      "name: ${name}",
+      "device_class: ${1|none,battery,battery_charging,cold,connectivity,door,garage_door,gas,heat,light,lock,moisture,motion,moving,occupancy,opening,plug,power,presence,problem,safety,smoke,sound,vibration,window|} # Optional",
+      "internal: ${1|false,true|} # Optional",
+    ],
+  },
+  "Status": {
+    "description": "ESPHome: Status (Binary Sensor)",
+    "prefix": "status",
+    "body": [
+      "- platform: status",
+      "  name: ${name}",
+    ]
+  },
+  "GPIO": {
+    "description": "ESPHome: GPIO (Binary Sensor)",
+    "prefix": ["gpio", "binary_gpio"],
+    "body": [
+      "- platform: gpio",
+      "  pin: ${GPIO1}",
+    ]
+  }
+}

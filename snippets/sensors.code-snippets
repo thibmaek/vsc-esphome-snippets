@@ -7,8 +7,8 @@
       "unit_of_measurement: \"${%}\" # Optional",
       "icon: \"${mdi:percent}\" # Optional",
       "accuracy_decimals: 2 # Optional",
-      "internal: false # Optional",
-      "force_update: false # Optional",
+      "internal: ${1|false,true|} # Optional",
+      "force_update: ${2|false,true|} # Optional",
     ]
   },
   "ADC": {
