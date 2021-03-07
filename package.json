@@ -1,0 +1,41 @@
+{
+  "name": "vsc-esphome-snippets",
+  "displayName": "ESPHome Snippets",
+  "description": "Snippets for creating ESPHome configurations in VS Code",
+  "version": "1.0.0",
+  "publisher": "thibmaek",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/thibmaek/vsc-esphome-snippets"
+  },
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "yaml",
+        "path": "snippets/boards.code-snippets"
+      },
+      {
+        "language": "yaml",
+        "path": "snippets/components.code-snippets"
+      },
+      {
+        "language": "yaml",
+        "path": "snippets/core.code-snippets"
+      },
+      {
+        "language": "yaml",
+        "path": "snippets/sensors.code-snippets"
+      }
+    ]
+  },
+  "devDependencies": {
+    "vsce": "^1.85.1"
+  }
+}
