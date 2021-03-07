@@ -1,0 +1,26 @@
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+
+categories:
+  - title: 🚀 New snippets
+    labels:
+      - snippet
+      - feature
+  - title: 🐛 Bug Fixes
+    labels:
+      - bug
+  - title: 📦 Dependencies
+    labels:
+      - dependencies
+
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+
+version-resolver:
+  default: patch
+
+template: |
+  ## What's new
+
+  $CHANGES
+
+  __Thanks to:__ $CONTRIBUTORS

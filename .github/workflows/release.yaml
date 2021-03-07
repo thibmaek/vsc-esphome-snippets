@@ -1,0 +1,24 @@
+name: Release Pipeline
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  vsce:
+    name: "Publish to Visual Studio Code Extension Registry"
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@master
+
+      - name: Build (make)
+        run: make build
+
+      - name: Publish (vsce)
+        uses: lannonbr/vsce-action@master
+        with:
+          args: "publish -p $VSCE_TOKEN"
+        env:
+          VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
