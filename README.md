@@ -13,7 +13,7 @@ Snippets for creating [ESPHome](https://esphome.io) configurations in VS Code
 
 ## Install
 
-Install from VS Code extension menu.
+Install from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=thibmaek.vsc-esphome-snippets) or enter the identifier (`thibmaek.vsc-esphome-snippets`) in VS Code's Extensions Pane search.
 
 ## Usage
 
