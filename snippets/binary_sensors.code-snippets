@@ -23,5 +23,16 @@
       "- platform: gpio",
       "  pin: ${GPIO1}",
     ]
+  },
+  "GPIO Button": {
+    "description": "ESPHome: GPIO Binary Sensor (Button)",
+    "prefix": "button",
+    "body": [
+      "- platform: gpio",
+      "  pin:",
+      "    number: ${GPIO1}",
+      "    mode: INPUT_PULLUP",
+      "    inverted: true"
+    ]
   }
 }
