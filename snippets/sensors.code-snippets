@@ -41,4 +41,16 @@
       "    id: ${humidity}",
     ],
   },
+  "Rotary encoder": {
+    "description": "ESPHome: Rotary Encoder Sensor",
+    "prefix": "rotary",
+    "body": [
+      "- platform: rotary_encoder",
+      "  pin_a: ${GPIO2}",
+      "  pin_b: ${GPIO3}",
+      "  pin_reset: ${GPIO4}",
+      "  on_clockwise: ",
+      "  on_anticlockwise: "
+    ]
+  }
 }
